@@ -13,3 +13,27 @@ void dfs(int src)
             dfs(child);
     }
 }
+int main()
+{
+    int n, e;
+    cin >> n >> e;
+    while (e--)
+    {
+        int a, b;
+        cin >> a >> b;
+        v[a].push_back(b);
+        v[b].push_back(a);
+    }
+    memset(vis, false, sizeof(vis));
+    int c = 0;
+    for (int i = 0; i < n; i++)
+    {
+        if (vis[i] == false)
+        {
+            dfs(i);
+            c++;
+        }
+    }
+    cout << "component - " << c << endl;
+    return 0;
+}
