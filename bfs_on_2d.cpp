@@ -49,6 +49,7 @@ int main()
     cin >> si >> sj;
     memset(vis, false, sizeof(vis));
     memset(dis, -1, sizeof(dis));
-    
+    bfs(si, sj);
+    cout << dis[2][3];
     return 0;
 }
