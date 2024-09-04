@@ -35,3 +35,20 @@ void bfs(int si, int sj)
         }
     }
 }
+int main()
+{
+    cin >> n >> m;
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < m; j++)
+        {
+            cin >> a[i][j];
+        }
+    }
+    int si, sj;
+    cin >> si >> sj;
+    memset(vis, false, sizeof(vis));
+    memset(dis, -1, sizeof(dis));
+    
+    return 0;
+}
